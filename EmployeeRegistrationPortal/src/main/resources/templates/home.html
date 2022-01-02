@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>employees</title>
+	<link th:href="@{css/home.css}" rel="stylesheet">
+</head>
+
+<body>
+	<br>
+	<h2 align="center">
+		<font color="red" face="Verdana">Employee Registration Portal</font>
+		<h2>
+			<center>
+				<font size="2px" face="Verdana"><a style="color:blue" href="/addEmp"> +Add Employee | </a></font>
+				<font size="2px" face="Verdana"><a style="color:blue" href="/deleteEmp"> -Delete Employee | </a></font>
+				<font size="2px" face="Verdana"><a style="color:blue" href="/updateEmp"> +Update Employee </a></font>
+			</center>
+
+			<table align="center" border="1" cellspacing="3" cellpadding="2">
+				<font size="2">
+					<tr style='font-size:small; font-family:Verdana'>
+						<th padding="2">ID</th>
+						<th>NAME</th>
+						<th>EMAIL</th>
+						<th>ADDRESS</th>
+						<th>REPORTING MANAGER</th>
+					</tr>
+					<tr style='font-size:small; font-family:Verdana' th:each="employee : ${employeeList}">
+						<td th:text="${employee.getEid()}"></td>
+						<td th:text="${employee.getEname()}"></td>
+						<td th:text="${employee.getEmail()}"></td>
+						<td th:text="${employee.getEaddr()}"></td>
+						<td th:text="${employee.getReportingManagerId()}"></td>
+					</tr>
+
+				</font>
+			</table>
+</body>
+
+</html>
