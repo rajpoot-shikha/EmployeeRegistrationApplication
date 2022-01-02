@@ -1,4 +1,5 @@
 # EmployeeRegistrationApplication
+This is a simple Spring Boot Based Application which demonstrates basic CRUD operations on Employee Enitity.
 
                           Home Page
 <img src="https://user-images.githubusercontent.com/40024983/147874245-ccaa9fc3-3473-4696-b452-1b58b84e4cba.png" width="500">
